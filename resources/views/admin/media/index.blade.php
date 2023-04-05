@@ -40,7 +40,7 @@
                             @if ($id!=1)
                             <div class="thumbnail">
                                 <a href="{{ route('admin.media.show',$id) }}">
-                                    <img id="{{ $id }}" src="{{ $media->getUrl('thumb') }}">
+                                  <img id="{{ $id }}" src="{{ asset($media->getUrl('thumb')) }}">
                                 </a>
                             </div>
                             @endif

@@ -29,7 +29,7 @@
             </a>
           </li>
 
-          <li class="nav-item has-treeview @if(Request::segment(2)=="tutor") menu-open @endif">
+          {{--<li class="nav-item has-treeview @if(Request::segment(2)=="tutor") menu-open @endif">
             <a href="{{ route('admin.tutor.course.index') }}" class="nav-link @if(Request::segment(3)=="course") active @endif">
                 <i class="nav-icon fas fa-graduation-cap"></i>
               <p>
@@ -69,7 +69,7 @@
                   </a>
                 </li>
             </ul>
-          </li>
+          </li> --}}
 
           <li class="nav-item has-treeview @if(Request::segment(2)=="media") menu-open @endif">
             <a href="{{ route('admin.media.index') }}" class="nav-link @if(Request::segment(2)=="media") active @endif">

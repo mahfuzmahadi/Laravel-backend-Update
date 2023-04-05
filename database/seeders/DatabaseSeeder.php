@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(OptionSeeder::class);
 
         User::create([
-            'email' => 'hsdmrsoft@gmail.com',
+            'email' => 'mahfuzurmahadi@gmail.com',
             'password' => Hash::make(12345678),
             'role' => 'admin'
         ]);
