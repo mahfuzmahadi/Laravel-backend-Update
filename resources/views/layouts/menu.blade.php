@@ -72,7 +72,7 @@
                 <div class="collapse navbar-collapse" id="navbarsExample07">
                     <ul class="navbar-nav ml-auto">
                         @foreach (App\Models\Menu::orderBy('order', 'asc')->where('position', '=', 1)->get()
-    as $menuItem)
+                            as $menuItem)
 
                             @if ($menuItem->parent == null && $menuItem->title != null)
                                 <li {{ $menuItem->children->isEmpty() ? '' : 'class=dropdown' }}

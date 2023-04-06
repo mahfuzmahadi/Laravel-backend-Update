@@ -1,13 +1,17 @@
 <?php
 
 use App\Models\Page;
+
 use Illuminate\Support\Facades\Route;
+
 
 
 Route::get('/', function () {
     $page = Page::find(1);
     return view('index',compact('page'));
 })->name('home');
+
+Route::post('/send-email', 'App\Http\Controllers\EmailController@sendEmail')->name('sendEmail');
 
 Route::post('/ajax', [App\Http\Controllers\Admin\AjaxController::class, 'ajax'])->name('ajax')->middleware('isAdmin');
 

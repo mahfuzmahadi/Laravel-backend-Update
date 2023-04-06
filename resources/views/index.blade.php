@@ -285,15 +285,16 @@ background-position: center;">
             <div class="form">
                 <h6 class="subtitle">Available 24/7</h6>
                 <h6 class="section-title mb-4">Get In Touch</h6>
-                <form>
+                <form method="POST" action="{{ route('sendEmail') }}">
+                    @csrf
                     <div class="form-group">
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Subject" required>
+                        <input type="text" name="subject" class="form-control" id="exampleInputPassword1" placeholder="Subject" required>
                     </div>
                     <div class="form-group">
-                        <textarea name="contact-message" id="" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
+                        <textarea name="message" id="" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-block rounded w-lg">Send Message</button>
                 </form>
